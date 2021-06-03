@@ -1,0 +1,530 @@
+*{
+   box-sizing: border-box;
+}
+body{
+   margin:0px;
+   background-color: black;
+}
+.video-container{
+   background-color: black;
+   position: absolute;
+   z-index: -1;
+   overflow: hidden;
+   top: 0vh;
+   height: 100%;
+   left: 19vw;
+}
+.video{
+   height: 100%;
+}
+
+
+
+
+
+.btn-container{
+   padding-top: 10px;
+   text-align: center;
+   position: fixed;
+   z-index: 4;
+   top: 30%;
+   right: 64px;
+   height: 6rem;
+   width: 6rem;
+   background: black;
+   border-radius: 50%;
+   border: 0.5rem solid white;
+}
+.round-btn{
+   height: 3.7rem;
+   width: 3.7rem;
+   border-radius: 50%;
+   border: none;
+   outline: none;
+}
+.position-top{
+   top: 47%;  
+}
+.record{
+   background-color: red;
+}
+
+
+
+
+
+
+.filter_overlay{
+   height:100vh;
+   width:100vw;
+   position: fixed;
+   left:0px;
+   top:0px;
+   /* background-color: #ffebcd73; */
+   z-index: 2;
+}
+.filter_btn-container{
+   height: 27rem;
+   width: 7rem;
+   position: fixed;
+   top: calc( (100vh - 27rem)/2);
+   left: 6vw;
+   /* background-color: red; */
+   z-index: 4;
+}
+.filter{
+   height: 20%;
+   border: 1px solid white;
+   background-blend-mode: color-burn;/* it mix bg color and background  image */
+   background-image: url("https://picsum.photos/id/870/200/300?grayscale&blur=2"); 
+   background-size: cover;   /*controls width of background image (jitni parent ki width h utni hi image ko width dega) */
+/* or  background-size: 100%; */
+}
+
+.timing{
+   color: white;
+   font-weight: 600;
+   position: fixed;
+   bottom: 6vh;
+   left: 4vw;
+   font-size: 2.7rem;
+   font-family: sans-serif;
+   display: none;
+   z-index: 6;
+}
+
+.record-animation{
+   animation: scaleUp 1s;
+   animation-iteration-count: infinite;
+}
+.capture-animation{
+   animation: scaleUp 1s;
+   animation-iteration-count: 1s;
+}
+@keyframes scaleUp{
+   0%{
+      transform: scale(1);
+   }
+   50%{
+      transform: scale(1.08);
+   }
+   100%{
+      transform: scale(1);
+   }
+   
+}
+
+
+.zoom-parent{
+   height: 7rem;
+   width: 4rem;
+   background-color: #444;
+   position: fixed;
+   z-index: 10;
+   right: 6vw;
+   top: 9vh;
+   border: 1px solid;
+   border-radius: 2px;
+   border: 1px solid white;
+}
+.zoom-parent>*{
+   color: white;
+   height: 50%;
+   border-bottom: 2px solid black;
+   text-align: center;
+   padding-top: 0.6rem;
+   border: 1px solid;
+   
+}
+.icon{
+   font-size: 180%;
+}
+
+
+.gallery{
+   position: fixed;
+   z-index: 10;
+   bottom: 9vh;
+   right: 5vw;
+   display: block;
+   height: 5rem;
+   width: 5rem;
+   text-decoration: none;
+   background-color: #444;
+   border-radius: 50%;
+   color: white;
+   font-size: 143%;
+   padding-top: 12px;
+   text-align: center;
+   border: 3px solid;
+}
+
+.Heading{
+   color: white;
+   font-size: 4rem;
+   margin: 0 auto;
+   height: 6rem;
+   width: 57rem;
+   padding-left: 304px;
+   padding-top: 10px;
+   background-color: black;
+   font-weight: 900;
+   border: 3px solid white;
+}
+ .gallery-delete-button,
+ .gallery-download-button {
+   border: none;
+   height: 10%;
+   display: block;
+   color: white;
+   font-size: 1.2rem;
+   width: 100%;
+ }
+ 
+
+ .gallery-img-container img,
+ .gallery-vid-container video {
+   height: 80%;
+   display: block;
+   width: 100%;
+ 
+ }
+ 
+
+ .gallery-img-container,
+ .gallery-vid-container {
+   width: 25rem;
+   background: black;
+   height: 25rem;
+   padding: 2rem;
+   margin: 2rem;  
+   border: 4px solid white;
+ }
+ 
+
+ .gallery-back {
+   position: fixed;
+   right: 39px;
+   bottom: 37px;
+   height: 5rem;
+   width: 5rem;
+   border-radius: 50%;
+   border: none;
+   background: black;
+   color: white;
+   font-size: 0.5rem;
+ }
+
+ 
+
+ .gallery-delete-button {
+   background: #444;
+   color: white;
+ }
+ 
+ .gallery-download-button {
+   background: white;
+   color: #444;
+ }
+
+
+
+ @media (max-width: 1300px) {
+   .video-container{
+     
+      left: 16vw;
+   }
+ }
+ @media (max-width: 1200px) {
+   .video-container{
+     
+      left: 15vw;
+   }
+ }
+ @media (max-width: 1100px) {
+   .video-container{
+     
+      left: 13vw;
+   }
+ }
+ @media (max-width: 980px) {
+   .video-container{
+     
+      left: 6vw;
+   }
+ }
+ @media (max-width: 930px) {
+   .video-container{
+     
+      left: 2vw;
+   }
+   .filter_overlay{
+      height:100%;
+      width:100%;     
+      left:0px;
+      top:0px; 
+   }
+   .Heading{    
+      font-size: 4rem;   
+      height: 6rem;
+      width: 30rem;
+      padding-left: 82px;
+      padding-top: 10px;
+   }
+ }
+ @media (max-width: 875px) {
+   .video-container{     
+      left: 0vw;    
+   }
+
+
+   .btn-container{ 
+      top: 75%;
+      right: 440px;
+      height: 6rem;
+      width: 6rem;
+   }
+   .round-btn{
+      height: 3.7rem;
+      width: 3.7rem;
+   }
+   .position-top{
+      right: 300px;
+   }
+
+
+ }
+ @media (max-width: 800px) {
+   .video-container{
+     
+      top: 4vh;
+   }
+
+   .btn-container{ 
+      top: 65%;
+      right: 440px;
+      height: 6rem;
+      width: 6rem;
+   }
+   .round-btn{
+      height: 3.7rem;
+      width: 3.7rem;
+   }
+   .position-top{
+      right: 300px;
+   }
+   .gallery{
+    
+      bottom: 14vh;
+      right: 7vw;
+      height: 5rem;
+      width: 5rem;
+   }
+ 
+ }
+ @media (max-width: 700px) {
+   .video-container{
+     
+      top: 15vh;
+   }
+   .gallery{
+    
+      bottom: 25vh;
+      right: 7vw;
+      height: 5rem;
+      width: 5rem;
+   }
+   .zoom-parent{
+      height: 7rem;
+      width: 4rem;   
+      right: 6vw;
+      top: 17vh;
+   }
+ }
+ @media (max-width: 600px) {
+   .video-container{
+     
+      top: 25vh;
+   }
+   .btn-container{ 
+      top: 85%;
+      left:50px;
+      height: 6rem;
+      width: 6rem;
+   }
+   .round-btn{
+      height: 3.7rem;
+      width: 3.7rem;
+   }
+   .position-top{
+      left: 180px;
+   }
+   .gallery{
+    
+      bottom: 7vh;
+      right: 7vw;
+      height: 5rem;
+      width: 5rem;
+   }
+   .zoom-parent{
+      height: 8rem;
+      width: 4.5rem;   
+      right: 6vw;
+      top: 30vh;    
+   }
+   .zoom-parent>*{
+      padding-top: 1.1rem;   
+   }
+
+   .filter_btn-container{
+      height: 27rem;
+      width: 7rem;
+      top: 30vh;
+      left: 6vw;
+      
+   }
+   .timing{
+      bottom: 25vh;
+      left: 4vw;
+   }
+ }
+ @media (max-width: 500px) {
+   .video-container{
+     
+      top: 45vh;
+   }
+   .btn-container{ 
+      top: 85%;
+      left:100px;
+      height: 8rem;
+      width: 8rem;
+   }
+   .round-btn{
+      height: 5.5rem;
+      width: 5.5rem;
+   }
+   .position-top{
+      left: 280px;
+   }
+   .gallery{
+    
+      bottom: 7vh;
+      right: 10vw;
+      height: 6rem;
+      width: 6rem;
+   }
+   .zoom-parent{
+      height: 8rem;
+      width: 4.5rem;   
+      right: 6vw;
+      top: 20vh; 
+   }
+   .zoom-parent>*{
+      padding-top: 1.3rem;   
+   }
+   .filter_btn-container{
+      height: 7rem;
+      width: 35rem;
+      top: 21vh;
+      left: 6vw;
+      display: flex;
+      flex-direction: row;
+   }
+   .filter {
+      height: 100%;
+      width: calc(100% / 5);
+    }
+    .timing{
+      bottom: 35vh;
+      left: 5vw;
+   }
+   .Heading{    
+      font-size: 4rem;
+      height: 6rem;
+      width: 21rem;
+      padding-left: 9px;
+      padding-top: 10px;
+   }
+   .gallery-img-container,
+   .gallery-vid-container {
+     width: 20rem;  
+     height: 20rem;
+     padding: 2rem;
+     margin: 2rem;  
+   }
+ }
+ @media (max-width: 400px) {
+   .video-container{
+     
+      top: 80vh;
+   }
+
+   .btn-container{ 
+      top: 85%;
+      left:100px;
+      height: 10rem;
+      width: 10rem;
+   }
+   .round-btn{
+      
+      height: 7.5rem;
+      width: 7.5rem;
+   }
+   .position-top{
+      left: 280px;
+   }
+
+   .gallery{
+    
+      bottom: 15vh;
+      right: 15vw;
+      height: 8rem;
+      width: 8rem;
+   }
+   .zoom-parent{
+      height: 10rem;
+      width: 5.5rem;   
+      right: 8vw;
+      top: 40vh;
+    
+   }
+   .zoom-parent>*{
+      padding-top: 1.5rem;   
+   }
+   .filter_btn-container{
+      height: 9rem;
+      width: 37rem;
+      top: 42vh;
+      left: 6vw;
+      display: flex;
+      flex-direction: row;
+   }
+   .filter {
+      height: 100%;
+      width: calc(100% / 5);
+    }
+    .timing{
+      bottom: 45vh;
+      left: 15vw;
+   }
+   .gallery-img-container,
+   .gallery-vid-container {
+     width: 15rem;  
+     height: 15rem;
+     padding: 2rem;
+     margin: 2rem;  
+   }
+ }
+ @media (max-width: 300px) {
+   .video-container{
+     
+      top: 80vh;
+   }
+   .gallery{
+    
+      bottom: 20vh;
+      right: 15vw;
+      height: 8rem;
+      width: 8rem;
+   }
+ }

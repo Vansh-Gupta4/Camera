@@ -3,19 +3,22 @@
 }
 body{
    margin:0px;
-   background-color: black;
+   background-color: black;  
+   overflow: hidden;
 }
 .video-container{
    background-color: black;
    position: absolute;
-   z-index: -1;
-   overflow: hidden;
+   z-index: -1; 
    top: 0vh;
-   height: 100%;
-   left: 19vw;
+   height: 100vh;
+   width: 100vw;
+ 
+   text-align: center;
 }
 .video{
    height: 100%;
+   width: 100%;
 }
 
 
@@ -85,7 +88,7 @@ body{
    color: white;
    font-weight: 600;
    position: fixed;
-   bottom: 6vh;
+   bottom: 5vh;
    left: 4vw;
    font-size: 2.7rem;
    font-family: sans-serif;
@@ -140,7 +143,6 @@ body{
    font-size: 180%;
 }
 
-
 .gallery{
    position: fixed;
    z-index: 10;
@@ -159,105 +161,9 @@ body{
    border: 3px solid;
 }
 
-.Heading{
-   color: white;
-   font-size: 4rem;
-   margin: 0 auto;
-   height: 6rem;
-   width: 57rem;
-   padding-left: 304px;
-   padding-top: 10px;
-   background-color: black;
-   font-weight: 900;
-   border: 3px solid white;
-}
- .gallery-delete-button,
- .gallery-download-button {
-   border: none;
-   height: 10%;
-   display: block;
-   color: white;
-   font-size: 1.2rem;
-   width: 100%;
- }
- 
 
- .gallery-img-container img,
- .gallery-vid-container video {
-   height: 80%;
-   display: block;
-   width: 100%;
- 
- }
- 
-
- .gallery-img-container,
- .gallery-vid-container {
-   width: 25rem;
-   background: black;
-   height: 25rem;
-   padding: 2rem;
-   margin: 2rem;  
-   border: 4px solid white;
- }
- 
-
- .gallery-back {
-   position: fixed;
-   right: 39px;
-   bottom: 37px;
-   height: 5rem;
-   width: 5rem;
-   border-radius: 50%;
-   border: none;
-   background: black;
-   color: white;
-   font-size: 0.5rem;
- }
-
- 
-
- .gallery-delete-button {
-   background: #444;
-   color: white;
- }
- 
- .gallery-download-button {
-   background: white;
-   color: #444;
- }
-
-
-
- @media (max-width: 1300px) {
-   .video-container{
-     
-      left: 16vw;
-   }
- }
- @media (max-width: 1200px) {
-   .video-container{
-     
-      left: 15vw;
-   }
- }
- @media (max-width: 1100px) {
-   .video-container{
-     
-      left: 13vw;
-   }
- }
- @media (max-width: 980px) {
-   .video-container{
-     
-      left: 6vw;
-   }
- }
  @media (max-width: 930px) {
-   .video-container{
-     
-      left: 2vw;
-   }
+
    .filter_overlay{
       height:100%;
       width:100%;     
@@ -273,9 +179,6 @@ body{
    }
  }
  @media (max-width: 875px) {
-   .video-container{     
-      left: 0vw;    
-   }
 
 
    .btn-container{ 
@@ -295,10 +198,7 @@ body{
 
  }
  @media (max-width: 800px) {
-   .video-container{
-     
-      top: 4vh;
-   }
+   
 
    .btn-container{ 
       top: 65%;
@@ -314,7 +214,7 @@ body{
       right: 300px;
    }
    .gallery{
-    
+      overflow: auto;
       bottom: 14vh;
       right: 7vw;
       height: 5rem;
@@ -323,12 +223,27 @@ body{
  
  }
  @media (max-width: 700px) {
-   .video-container{
+   /* .video-container{
      
       top: 15vh;
+   } */
+   .btn-container{ 
+      top: 70%;
+      left:230px;
+      height: 6rem;
+      width: 6rem;
    }
+   .round-btn{
+      height: 3.7rem;
+      width: 3.7rem;
+   }
+   .position-top{
+      left: 350px;
+   }
+
+
    .gallery{
-    
+    overflow: auto;
       bottom: 25vh;
       right: 7vw;
       height: 5rem;
@@ -342,10 +257,7 @@ body{
    }
  }
  @media (max-width: 600px) {
-   .video-container{
-     
-      top: 25vh;
-   }
+
    .btn-container{ 
       top: 85%;
       left:50px;
@@ -377,41 +289,38 @@ body{
    }
 
    .filter_btn-container{
-      height: 27rem;
+      height: 25rem;
       width: 7rem;
-      top: 30vh;
+      top: 10vh;
       left: 6vw;
       
    }
    .timing{
-      bottom: 25vh;
-      left: 4vw;
+      top: 5vh;
+      left: 30vw;
    }
  }
  @media (max-width: 500px) {
-   .video-container{
-     
-      top: 45vh;
-   }
+ 
    .btn-container{ 
-      top: 85%;
-      left:100px;
-      height: 8rem;
-      width: 8rem;
+      top: 83%;
+      left:50px;
+      height: 6rem;
+      width: 6rem;
    }
    .round-btn{
-      height: 5.5rem;
-      width: 5.5rem;
+      height: 3.8rem;
+      width: 3.8rem;
    }
    .position-top{
-      left: 280px;
+      left: 180px;
    }
    .gallery{
     
-      bottom: 7vh;
+      bottom: 1vh;
       right: 10vw;
-      height: 6rem;
-      width: 6rem;
+      height: 5rem;
+      width: 5rem;
    }
    .zoom-parent{
       height: 8rem;
@@ -423,10 +332,10 @@ body{
       padding-top: 1.3rem;   
    }
    .filter_btn-container{
-      height: 7rem;
-      width: 35rem;
-      top: 21vh;
-      left: 6vw;
+      height: 4.5rem;
+      width: 20rem;
+      top: 2vh;
+      left: 2vw;
       display: flex;
       flex-direction: row;
    }
@@ -435,8 +344,8 @@ body{
       width: calc(100% / 5);
     }
     .timing{
-      bottom: 35vh;
-      left: 5vw;
+      top: 70vh;
+      left: 10vw;
    }
    .Heading{    
       font-size: 4rem;
@@ -450,52 +359,48 @@ body{
      width: 20rem;  
      height: 20rem;
      padding: 2rem;
-     margin: 2rem;  
+     margin: 2rem; 
+     overflow: auto; 
    }
  }
  @media (max-width: 400px) {
-   .video-container{
-     
-      top: 80vh;
-   }
-
+   
+  
    .btn-container{ 
-      top: 85%;
-      left:100px;
-      height: 10rem;
-      width: 10rem;
+      top: 83%;
+      left:50px;
+      height: 6rem;
+      width: 6rem;
    }
    .round-btn{
-      
-      height: 7.5rem;
-      width: 7.5rem;
+      height: 3.8rem;
+      width: 3.8rem;
    }
    .position-top{
-      left: 280px;
+      left: 180px;
    }
-
    .gallery{
     
-      bottom: 15vh;
-      right: 15vw;
-      height: 8rem;
-      width: 8rem;
+      bottom: 20vh;
+      right: 32vw;
+      height: 5rem;
+      width: 5rem;
    }
-      .zoom-parent{
-      height: 10rem;
-      width: 5.5rem;   
-      right: 8vw;
-      top: 25vh;
-    
+   .zoom-parent{
+      height: 4rem;
+      width: 2.5rem;   
+      right: 6vw;
+      top: 18vh; 
+      
    }
    .zoom-parent>*{
-      padding-top: 1.5rem;   
+      padding-top: 0rem;   
    }
    .filter_btn-container{
-      height: 9rem;
-      width: 20rem;
-      top: 25vh;
-      left: 6vw;
+      height: 4rem;
+      width: 15rem;
+      top: 2vh;
+      left: 2vw;
       display: flex;
       flex-direction: row;
    }
@@ -504,27 +409,33 @@ body{
       width: calc(100% / 5);
     }
     .timing{
-      bottom: 45vh;
-      left: 15vw;
+      top: 75vh;
+      left: 5vw;
+      font-size: 1rem;
+   }
+   .Heading{    
+      font-size: 4rem;
+      height: 6rem;
+      width: 21rem;
+      padding-left: 9px;
+      padding-top: 10px;
    }
    .gallery-img-container,
    .gallery-vid-container {
-     width: 15rem;  
-     height: 15rem;
+     width: 20rem;  
+     height: 20rem;
      padding: 2rem;
-     margin: 2rem;  
+     margin: 2rem; 
+     overflow: auto; 
    }
  }
  @media (max-width: 300px) {
-   .video-container{
-     
-      top: 80vh;
-   }
+  
    .gallery{
     
-      bottom: 20vh;
-      right: 15vw;
-      height: 8rem;
-      width: 8rem;
+      bottom: 15vh;
+      right: 32vw;
+      height: 5rem;
+      width: 5rem;
    }
  }

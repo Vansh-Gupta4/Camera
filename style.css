@@ -481,11 +481,11 @@ body{
       height: 8rem;
       width: 8rem;
    }
-   .zoom-parent{
+      .zoom-parent{
       height: 10rem;
       width: 5.5rem;   
       right: 8vw;
-      top: 40vh;
+      top: 25vh;
     
    }
    .zoom-parent>*{
@@ -493,8 +493,8 @@ body{
    }
    .filter_btn-container{
       height: 9rem;
-      width: 37rem;
-      top: 42vh;
+      width: 20rem;
+      top: 25vh;
       left: 6vw;
       display: flex;
       flex-direction: row;
